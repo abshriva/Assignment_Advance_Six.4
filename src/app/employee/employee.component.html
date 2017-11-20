@@ -1,0 +1,25 @@
+<h1>Two Way Data Binding with @Input</h1>
+
+<!--creating a div for Eemployee  -->
+
+<div id="login">
+  <div class="form-wrap" class="col-xs-9">
+      First Name<input type="text" [(ngModel)]="firstName" placeholder="FirstName" class="form-control" #fName>
+      <br>
+      Last Name<input type="text" [(ngModel)]="lastName" placeholder="LastName" class="form-control" #lName>
+      
+  </div>
+  <div class="col-xs-9">
+        <br>
+        <button type="button" class="btn btn-large btn-block btn-primary" (click)="display(fName,lName)">Login</button>
+        <br>
+    <!-- Bind the data from Child throught Property Binding -->
+    <app-employee-detail [title]="title"></app-employee-detail>
+  </div>
+</div>
+
+
+
+
+
+
